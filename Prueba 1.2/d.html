@@ -1,0 +1,124 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <script>
+      function validarCampos() {
+          var contra1 = document.getElementById("InputContrasena").value;
+          var contra2 = document.getElementById("InputRContrasena").value;
+
+          var correo1 = document.getElementById("InputCorreo").value;
+          var correo2 = document.getElementById("InputRCorreo").value;
+      
+          if (contra1 == contra2 && correo1 == correo2)
+          {
+              alert("Enviado.");
+          }
+          else if(contra1 !== contra2)
+          {
+              alert("Las contraseñas no coinciden, intentalo de nuevo.")
+          } 
+          else if(correo1 !== correo2)
+          {
+              alert("Los Correos Electronicos no coinciden, intentalo de nuevo.")
+          } 
+          else 
+          {
+              alert("Las contraseñas y los correos electronicos no coinciden, intentalo de nuevo.");
+          }
+      }
+      </script>
+</head>
+<body  style="background-color: lightslategrey;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="a.html">HOME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="b.html">SHOP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="c.html">CARRO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">REGISTRAR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="e.html">INICIAR SECION</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <span class="placeholder col-12 bg-dark" ></span>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <table align="center" style="width: 25%; height: 30%; background-color: aliceblue; border-collapse: separate; border-radius: 15px;" border="1">
+      <tr id="TituloTabla">
+          <td colspan="2" align="center" style="font-size: larger;"><strong>Registro</strong></td>
+      </tr>
+      <tr id="NombreCompleto" align="center">
+          <td align="right"><strong>Nombre Completo:</strong></td>
+          <td align="left"><input type="text" name="InputNombre" id="InputNombre" ></td>
+      </tr>
+      <tr id="ApPaterno" align="center">
+          <td align="right"><strong>Apellido Paterno:</strong></td>
+          <td align="left"> <input type="text" name="InputPaterno" id="InputPaterno"></td>
+      </tr>
+      <tr id="ApMaterno" align="center">
+          <td align="right"><strong>Apellido Materno:</strong></td>
+          <td align="left"><input type="text" name="InputMaterno" id="InputMaterno"></td>
+      </tr>
+      <tr id="Genero" align="center">
+          <td align="right"><strong>Genero:</strong></td>
+          <td align="left"><select name="InputGenero" id="InputGenero" style="width: 100%;" >
+              <option disabled selected value="-">Selecciona una opción</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+              <option value="PrefieroNoDecirlo">Prefiero No Decirlo</option>
+          </td>
+      </tr>
+      <tr id="FechaNacimiento" align="center">
+          <td align="right"><strong>Fecha de Nacimiento:</strong></td>
+          <td align="left"><input type="date" name="InputNacimiento" id="InputNacimiento" style="width: 100%;"></td>
+      </tr>
+      <tr id="Direccion" align="center">
+          <td align="right"><strong>Direccion:</strong></td>
+          <td align="left"><input type="text" name="InputDireccion" id="InputDireccion"></td>
+      </tr>
+      <tr id="CorreoElectronico" align="center">
+          <td align="right"><strong>Correo Electronico:</strong></td>
+          <td align="left"><input type="text" name="InputCorreo" id="InputCorreo"></td>
+      </tr>
+      <tr id="RCorreoElectronico" align="center">
+          <td align="right"><strong>Repita Correo Electronico:</strong></td>
+          <td align="left"><input type="text" name="InputRCorreo" id="InputRCorreo"></td>
+      </tr>
+      <tr id="Contrasena" align="center">
+          <td align="right"><strong>Contraseña:</strong></td>
+          <td align="left"><input type="password" name="InputContrasena" id="InputContrasena"></td>
+      </tr>
+      <tr id="RContrasena" align="center">
+          <td align="right"><strong>Repita Contraseña:</strong></td>
+          <td align="left"><input type="password" name="InputRContrasena" id="InputRContrasena"></td>
+      </tr>
+      <tr>
+          <td colspan="2" align="center"><input type="submit" value="Registarse" onclick="validarCampos()" class="btn btn-primary"></td>
+      </tr>
+  </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
